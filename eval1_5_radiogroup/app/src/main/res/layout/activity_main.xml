@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton_comida">
+
+        <RadioButton
+            android:id="@+id/rb_tacos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tacos"
+            />
+        <RadioButton
+            android:id="@+id/rb_tortas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tortas"/>
+        <RadioButton
+            android:id="@+id/rb_montados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Montados"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_burritos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Burritos"/>
+
+    </RadioGroup>
+
+</LinearLayout>
