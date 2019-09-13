@@ -5,34 +5,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements ListView.OnItemClickListener {
 
-    ListView lista_items;
+    Comida[] cComida = {
+            new Comida(),
+            new Comida(R.drawable.comida_1,"Hamburgesa","El mejor sason de todo el mundo"),
+            new Comida(R.drawable.comida_2,"Carne","La merjor carne de todas"),
+            new Comida(R.drawable.comida_3,"Asado","El mejor asado de todos")
 
-    Comida[] comoda_tipo = {
-            new Comida(R.drawable.f1, "Comida 1", "Titulo 1"),
-            new Comida(R.drawable.f1, "Comida 2", "Titulo 2"),
-            new Comida(R.drawable.f1, "Comida 3", "Titulo 3")
     };
+
+    ListView lstClima;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        lstClima = findViewById(R.id.list_comida);
 
-        lista_items = findViewById(R.id.lista_items);
-
-
-
-
-
+        lstClima.setAdapter(new Adapter_Comida(
+                this,
+                R.layout.layaut_adapter,
+                cComida));
+        lstClima.setOnItemClickListener(this);
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Toast.makeText(this,cComida[position].getTitulo(), Toast.LENGTH_SHORT).show();
 
     }
 }

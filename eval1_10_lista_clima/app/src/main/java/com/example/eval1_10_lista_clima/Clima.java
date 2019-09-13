@@ -6,8 +6,15 @@ public class Clima {
     private double temp;
     private String clima;
 
-    public Clima(int atmospher, String aldama, int i, String chido) {
-        this.imagen = R.drawable.sunny;
+    public Clima() {
+        imagen = R.drawable.sunny;
+        ciudad = "Chihuahua";
+        temp = 40;
+        clima = "El infierno";
+    }
+
+    public Clima(int imagen, String ciudad, int i, String clima) {
+        this.imagen = imagen;
         this.ciudad = ciudad;
         this.temp = temp;
         this.clima = clima;

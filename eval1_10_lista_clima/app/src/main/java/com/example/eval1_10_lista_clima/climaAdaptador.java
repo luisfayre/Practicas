@@ -30,9 +30,15 @@ Clima[] cCiudades;
         if (convertView == null){
             //CREAR NUESTRO LAYOUT
             //INFLATER
-            LayoutInflater lInflator = ((Activity)context).getLayoutInflater();
-            convertView = lInflator.inflate(resourse,parent,false);
+            //LayoutInflater lInflator = ((Activity)context).getLayoutInflater();
+            //convertView = lInflator.inflate(R.layout.layout_clima,parent,false);
+
+            LayoutInflater llInflator = ((Activity)context).getLayoutInflater();
+            convertView = llInflator.inflate(resourse, parent, false);
+
+            //convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_clima, parent, false);
         }
+
         imgClima = convertView.findViewById(R.id.imagen_clima);
         txtCiudad = convertView.findViewById(R.id.ciudad);
         txtTemp = convertView.findViewById(R.id.temperatura);
@@ -40,10 +46,10 @@ Clima[] cCiudades;
 
         imgClima.setImageResource(cCiudades[position].getImagen());
         txtCiudad.setText(cCiudades[position].getCiudad());
-        txtTemp.setText(cCiudades[position].getTemp()+" C");
+        txtTemp.setText(cCiudades[position].getTemp() +" C");
         txtClima.setText(cCiudades[position].getClima());
 
 
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 }

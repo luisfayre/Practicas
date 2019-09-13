@@ -7,9 +7,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements ListView.OnItemClickListener {
 
     Clima[] cCiudades = {
+            new Clima(),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
@@ -32,13 +33,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         lstClima = findViewById(R.id.lista);
 
-        lstClima.setAdapter(new climaAdaptador(this, R.layout.layout_clima,cCiudades));
+        lstClima.setAdapter(new climaAdaptador(
+                this,
+                R.layout.layout_clima,
+                cCiudades));
         lstClima.setOnItemClickListener(this);
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(this,cCiudades[position].getCiudad(), Toast.LENGTH_SHORT).show();
+     Toast.makeText(this,cCiudades[position].getCiudad(), Toast.LENGTH_SHORT).show();
 
     }
 }
