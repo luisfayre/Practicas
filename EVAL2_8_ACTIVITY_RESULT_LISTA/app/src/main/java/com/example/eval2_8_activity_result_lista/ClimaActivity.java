@@ -1,8 +1,5 @@
 package com.example.eval2_8_activity_result_lista;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,14 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ClimaActivity extends AppCompatActivity implements ListView.OnItemClickListener {
 
     Clima[] cCiudades = {
             new Clima(),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
+            new Clima(R.drawable.atmospher,"Aldama",30,"Chido"),
+            new Clima(R.drawable.atmospher,"Aldama",40,"Chido"),
+            new Clima(R.drawable.atmospher,"Aldama",50,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
@@ -58,6 +57,8 @@ public class ClimaActivity extends AppCompatActivity implements ListView.OnItemC
         intent.putExtra("clima",cCiudades[position].getClima());
 
         setResult(Activity.RESULT_OK,intent);
+        finish();
+
        // startActivity(intent);
 
     }
