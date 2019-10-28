@@ -15,12 +15,12 @@ public class ClimaActivity extends AppCompatActivity implements ListView.OnItemC
     Clima[] cCiudades = {
             new Clima(),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",30,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",40,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",50,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
-            new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
+            new Clima(R.drawable.atmospher,"Delecias",30,"Chido"),
+            new Clima(R.drawable.atmospher,"Camargo",40,"Chido"),
+            new Clima(R.drawable.atmospher,"Juarez",50,"Chido"),
+            new Clima(R.drawable.atmospher,"Cuahtécon",25,"Chido"),
+            new Clima(R.drawable.atmospher,"Parral",25,"Chido"),
+            new Clima(R.drawable.atmospher,"Meoqui",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido"),
             new Clima(R.drawable.atmospher,"Aldama",25,"Chido")

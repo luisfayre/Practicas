@@ -25,6 +25,12 @@
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="411dp" />
 
+    <EditText
+        android:id="@+id/contacto"
+        android:text="Contacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
